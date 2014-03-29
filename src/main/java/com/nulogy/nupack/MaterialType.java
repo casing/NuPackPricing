@@ -11,5 +11,5 @@ package com.nulogy.nupack;
  * @author casing
  */
 public enum MaterialType {
-    PHARMACEUTICALS, FOOD, ELECTRONICS, OTHER
+    DRUGS, FOOD, ELECTRONICS, OTHER
 }

@@ -18,6 +18,6 @@ public interface MarkupCalculator {
     void setMaterialType(MaterialType type);
     BigDecimal getBasePrice();
     int getNumberOfWorkers();
-    MaterialType getMatrialType();
+    MaterialType getMaterialType();
     BigDecimal getFinalCost();
 }

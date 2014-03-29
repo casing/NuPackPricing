@@ -45,7 +45,7 @@ public class NuPackMarkupCalculatorTest extends TestCase {
         expected = new BigDecimal("6199.81");
         calc.setBasePrice(new BigDecimal("5432.00"));
         calc.setNumberOfWorkers(1);
-        calc.setMaterialType(MaterialType.PHARMACEUTICALS);
+        calc.setMaterialType(MaterialType.DRUGS);
         assertEquals(expected, calc.getFinalCost());
         
         
