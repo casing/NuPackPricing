@@ -15,9 +15,9 @@ import java.math.BigDecimal;
 public interface MarkupCalculator {
     void setBasePrice(BigDecimal base);
     void setNumberOfWorkers(int workers);
-    void setMaterialType(String type);
+    void setMaterialType(MaterialType type);
     BigDecimal getBasePrice();
     int getNumberOfWorkers();
-    String getMatrialType();
+    MaterialType getMatrialType();
     BigDecimal getFinalCost();
 }
