@@ -32,22 +32,30 @@ For example...
 Input 1:
 --------
 $1299.99
+
 3 people
+
 food
 
 Input 2:
 --------
 $5432.00
+
 1 person
+
 drugs
 
 Input 3:
 --------
 $12456.95
+
 4 people
+
 books
 
 
 Output 1: $1591.58
+
 Output 2: $6199.81
+
 Output 3: $13707.63
