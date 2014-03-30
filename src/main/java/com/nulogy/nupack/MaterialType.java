@@ -7,7 +7,7 @@
 package com.nulogy.nupack;
 
 /**
- *
+ * Enumeration for possible Material types
  * @author casing
  */
 public enum MaterialType {

@@ -9,7 +9,10 @@ package com.nulogy.nupack.interest;
 import com.nulogy.nupack.MaterialType;
 
 /**
- *
+ * Interface to retrieve MarkupRate values.
+ * This intention is to allow MarkupCalculator to be independent of 
+ * MarkupRate source and values.
+ * 
  * @author casing
  */
 public interface MarkupRate {
