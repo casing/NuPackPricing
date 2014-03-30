@@ -6,18 +6,18 @@
 
 package com.nulogy.nupack;
 
-import java.math.BigDecimal;
+import com.nulogy.nupack.money.Money;
 
 /**
- *
+ * Interface for MarkupCalculator
  * @author casing
  */
 public interface MarkupCalculator {
-    void setBasePrice(BigDecimal base);
+    void setBasePrice(Money base);
     void setNumberOfWorkers(int workers);
     void setMaterialType(MaterialType type);
-    BigDecimal getBasePrice();
+    Money getBasePrice();
     int getNumberOfWorkers();
     MaterialType getMaterialType();
-    BigDecimal getFinalCost();
+    Money getFinalCost();
 }

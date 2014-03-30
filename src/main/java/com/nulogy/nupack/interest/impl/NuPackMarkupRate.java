@@ -10,6 +10,12 @@ import com.nulogy.nupack.interest.MarkupRate;
 import com.nulogy.nupack.MaterialType;
 
 /**
+ * Implementation of the MarkupRate for NuPack.
+ * This implementation is simply a lookup for static values.
+ * 
+ * This implementation can just as easily retrieve the rates from another 
+ * source like a database or file.  This is the main thought behind
+ * creating the MarkupRate interface and passing it into the MarkupCalculator.
  * 
  * @author casing
  */
@@ -22,16 +28,17 @@ public class NuPackMarkupRate implements MarkupRate {
     private static final double ELECT_MARKUP = 0.02;
 
     public double getMaterialMarkupRate(MaterialType type) {
-        switch(type) {
-            case DRUGS:
-                return DRUG_MARKUP;
-            case FOOD:
-                return FOOD_MARKUP;
-            case ELECTRONICS:
-                return ELECT_MARKUP;
-            default:
-                return 0.0;
+        if(type != null) {
+            switch(type) {
+                case DRUGS:
+                    return DRUG_MARKUP;
+                case FOOD:
+                    return FOOD_MARKUP;
+                case ELECTRONICS:
+                    return ELECT_MARKUP;
+            }
         }
+        return 0.0;
     }
 
     public double getFlatMarkupRate() {
