@@ -39,7 +39,6 @@ public class NuPackMarkupCalculatorTest {
      */
     private static NuPackMarkupRate markupRate;
     
-    private Money $19_99;
     private Money $n19_99;
     private Money largeMoney;
     
@@ -61,7 +60,6 @@ public class NuPackMarkupCalculatorTest {
     
     @Before
     public void setUp() {
-        $19_99 = new Money("19.99");
         $n19_99 = new Money("-19.99");
         largeMoney = new Money(new BigDecimal(Double.MAX_VALUE));
     }
@@ -141,6 +139,19 @@ public class NuPackMarkupCalculatorTest {
                 assertEquals("Test large base calculation with " + t + " and " + i + " workers.", 
                         new Money(calc.getFinalCost().toString()), calc.getFinalCost());
             }
+        }
+    }
+    
+    @Test
+    public void testLargeBaseMaxWokers() {
+        NuPackMarkupCalculator calc = new NuPackMarkupCalculator(markupRateMock);
+        calc.setBasePrice(largeMoney);
+        System.out.println(largeMoney);
+        for(MaterialType t : MaterialType.values()) {
+            calc.setNumberOfWorkers(Integer.MAX_VALUE);
+            calc.setMaterialType(t);
+            assertEquals("Test large base calculation with " + t + " and " + "Max workers.", 
+                    new Money(calc.getFinalCost().toString()), calc.getFinalCost());
         }
     }
 }
